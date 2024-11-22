@@ -1,0 +1,583 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  color: #00529b;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+  background: url("bg.webp") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.main::before {
+  content: "";
+  background: url("bg-reflex.webp") no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+  z-index: 0;
+  filter: blur(4px) brightness(50%);
+  transform: translateX(0%);
+  animation: horizontal-waves 12s infinite ease-in-out;
+  pointer-events: none;
+}
+
+/* Animación de ondas horizontales */
+@keyframes horizontal-waves {
+  0% {
+    background-position: 0% 50%;
+    transform: translateX(0%);
+    filter: blur(3px) brightness(50%);
+  }
+  25% {
+    background-position: 25% 50%;
+    transform: translateX(0.5%);
+    filter: blur(3.5px) brightness(50%);
+  }
+  50% {
+    background-position: 50% 50%;
+    transform: translateX(1%);
+    filter: blur(4px) brightness(50%);
+  }
+  75% {
+    background-position: 75% 50%;
+    transform: translateX(0.5%);
+    filter: blur(3.5px) brightness(50%);
+  }
+  100% {
+    background-position: 100% 50%;
+    transform: translateX(0%);
+    filter: blur(3px) brightness(50%);
+  }
+}
+
+@keyframes star-glow {
+  0%,
+  100% {
+    filter: brightness(1);
+    transform: scale(1);
+  }
+  50% {
+    filter: brightness(1.8);
+    transform: scale(1.1);
+  }
+}
+
+.star {
+  position: absolute;
+  display: inline-block;
+  width: 7%;
+  height: 11%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+/* Elemento interno que se encargará de la animación */
+.inner-star {
+  width: 100%;
+  height: 100%;
+  background: url("star.webp") no-repeat center center/contain;
+  animation: star-glow 2s infinite ease-in-out;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.inner-star:hover {
+  transform: scale(1.2);
+}
+
+/* Brillo */
+.inner-star::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("star.webp") no-repeat center center/contain;
+  filter: blur(10px) brightness(2);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: -1;
+}
+
+.inner-star:hover::before {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+/* Tooltip */
+.star::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  transform: translateX(-50%);
+  background-color: rgba(8, 32, 70, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  white-space: normal;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
+  text-shadow: 1px 1px 20px rgba(255, 255, 255, 0.8);
+  letter-spacing: 1px;
+  width: 200px;
+  word-wrap: break-word;
+  display: block;
+  text-align: center;
+  font-style: italic;
+}
+
+.star:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+/* Posiciones de las estrellas */
+.star-1 {
+  top: 20%;
+  left: 14%;
+}
+
+.star-2 {
+  top: 9%;
+  left: 25%;
+}
+
+.star-3 {
+  top: 22%;
+  left: 33%;
+}
+
+.star-4 {
+  top: 7%;
+  left: 41%;
+}
+
+.star-5 {
+  top: 9%;
+  right: 30%;
+}
+
+.star-6 {
+  top: 26%;
+  right: 23%;
+}
+
+.star-7 {
+  top: 11%;
+  right: 15%;
+}
+
+/* Posiciones de los tooltips */
+.star-1::after {
+  top: -10%;
+  left: 70%;
+}
+
+.star-2::after {
+  top: 100%;
+  left: 50%;
+}
+
+.star-3::after {
+  top: -10%;
+  left: 70%;
+}
+
+.star-4::after {
+  top: 100%;
+  left: 50%;
+}
+
+.star-5::after {
+  top: 100%;
+  left: 30%;
+}
+
+.star-6::after {
+  top: -10%;
+  left: 40%;
+}
+
+.star-7::after {
+  top: 100%;
+  left: 20%;
+}
+
+.download-btn {
+  background: url("btn.webp") no-repeat center center/contain;
+  width: 300px;
+  height: 70px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+  transition: 1s ease;
+}
+
+.download-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .main {
+    background: url("responsive-bg.webp") no-repeat center 90% / cover;
+  }
+
+  .main::before {
+    display: none;
+  }
+
+  .star {
+    width: 22%;
+    height: 11%;
+  }
+
+  .star-1 {
+    top: 6%;
+    left: 8%;
+  }
+
+  .star-2 {
+    top: 8%;
+    left: 42%;
+  }
+
+  .star-3 {
+    top: 10%;
+    left: 76%;
+  }
+
+  .star-4 {
+    top: 29%;
+    left: 6%;
+  }
+
+  .star-5 {
+    top: 21%;
+    right: 52%;
+  }
+
+  .star-6 {
+    top: 19%;
+    right: 27%;
+  }
+
+  .star-7 {
+    top: 32%;
+    right: 8%;
+  }
+
+  /* Posiciones de los tooltips */
+  .star-1::after {
+    top: 100%;
+    left: 125%;
+  }
+
+  .star-2::after {
+    top: 100%;
+    left: 50%;
+  }
+
+  .star-3::after {
+    top: 100%;
+    left: -25%;
+  }
+
+  .star-5::after {
+    top: 100%;
+    left: 125%;
+  }
+
+  .star-4::after {
+    top: 100%;
+    left: 125%;
+  }
+
+  .star-6::after {
+    top: 100%;
+    left: 40%;
+  }
+
+  .star-7::after {
+    top: 100%;
+    left: -25%;
+  }
+
+  .download-btn {
+    width: 250px;
+    height: 60px;
+  }
+}
+
+.background-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2; /* Detrás de las estrellas principales */
+  pointer-events: none; /* No interactúan con el mouse */
+}
+
+.bg-star {
+  position: absolute;
+  width: 3%;
+  height: 6%;
+  background: url("star.webp") no-repeat center center/contain;
+  opacity: 0.3;
+  transform: scale(0.8);
+}
+
+/* Posiciones iniciales de las estrellas de fondo */
+.bg-star-1 {
+  top: 15%;
+  left: 10%;
+}
+
+.bg-star-2 {
+  top: 5%;
+  left: 30%;
+}
+
+.bg-star-3 {
+  top: 19%;
+  right: 54%;
+}
+
+.bg-star-4 {
+  top: 3%;
+  right: 23%;
+}
+
+.bg-star-5 {
+  top: 10%;
+  right: 40%;
+}
+
+.bg-star-6 {
+  top: 20%;
+  right: 10%;
+}
+
+.fog {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  bottom: -10px;
+  width: 8px;
+  height: 8px;
+  background: rgba(143, 146, 146, 0.25);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  animation: float 6s linear infinite;
+}
+
+/* Animación para que las partículas suban menos y se arremolinen */
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-100px) scale(1.3);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-200px) scale(1.5);
+    opacity: 0; /* Desaparece al final */
+  }
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+}
+
+.modal::before {
+  backdrop-filter: none;
+  opacity: 0.1;
+}
+
+.modal h2 {
+  text-align: center;
+  margin: 12px 0;
+}
+
+.modal h2 a {
+  font-style: italic;
+  color: #00529b;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.modal .tingle-modal-box {
+  aspect-ratio: 4 / 7;
+  width: auto;
+  height: 90%;
+  border-radius: 6px;
+  border: #0b2852 6px solid;
+}
+
+.tingle-modal-box__content {
+  border-radius: 6px;
+  border: #84c0d3 3px solid;
+  padding: 0;
+  height: calc(100% + 4px);
+  margin: -2px;
+  overflow: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+.video {
+  aspect-ratio: 4 / 7;
+  transform: translateY(0px);
+  border-radius: 15px;
+  overflow: hidden;
+  min-height: 200px;
+}
+
+.video iframe {
+  height: 100%;
+  aspect-ratio: 4 / 7;
+}
+
+@media (max-width: 768px) {
+  .modal .tingle-modal-box {
+    height: 96%;
+    border: #0b2852 16px solid;
+  }
+
+  .tingle-modal-box__content {
+    border: #84c0d3 10px solid;
+    height: calc(100% + 10px);
+    margin: -5px;
+  }
+
+  .video {
+    aspect-ratio: 4 / 7;
+  }
+}
+
+@media (max-width: 540px) {
+  .tingle-modal__close {
+    top: 2.5rem;
+    right: 2.5rem;
+    left: unset;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    color: #fff;
+  }
+  .tingle-modal__closeLabel {
+    display: none;
+  }
+}
+
+.tingle-modal__close {
+  right: 10%;
+}
+
+.tingle-modal__closeIcon {
+  background-color: #84c0d3;
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 100%;
+  padding: 5px;
+  box-shadow: 0 0 10px #00529b;
+}
+
+.tingle-modal__closeIcon svg {
+  padding: 5px;
+}
+
+.tingle-modal__closeIcon svg * {
+  fill: #00529b !important;
+}
+
+.intro {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  color: #fff;
+
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(1, 13, 29, 0.4) 30%,
+    rgba(1, 13, 29, 0.9) 100%
+  );
+  opacity: 1;
+  transition: 2s;
+  cursor: pointer;
+}
+
+.intro p {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-shadow: 0 0 50px rgba(1, 13, 29, 1), 0 0 50px rgba(1, 13, 29, 1),
+    0 0 50px rgba(1, 13, 29, 1), 0 0 50px rgba(1, 13, 29, 1);
+  text-align: center;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+@media (max-width: 768px) {
+  .intro p {
+    font-size: 3rem;
+  }
+}
+
+.intro.vanish {
+  opacity: 0;
+  pointer-events: none;
+}

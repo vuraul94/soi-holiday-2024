@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Holidays 2024 - Schmidt Ocean Institute</title>
+    <link rel="icon" href="./favicon-320x320.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tingle.js@0.15.3/dist/tingle.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./intro.js"></script>
+    <script src="./parallax.js"></script>
+    <script src="./fog.js"></script>
+  </head>
+  <body>
+    <div class="intro">
+      <p>Explore the stars to uncover our year's highlights</p>
+    </div>
+    <div class="main">
+      <!-- Estrellas -->
+      <div
+        class="star star-1"
+        data-tooltip="Seamounts of the Southeast Pacific"
+        onclick="openModal1()"
+      >
+        <div class="inner-star"></div>
+      </div>
+      <div
+        class="star star-2"
+        data-tooltip="Unexplored Seamounts of the Salas y Gomez Ridge"
+        onclick="openModal2()"
+      >
+        <div class="inner-star"></div>
+      </div>
+      <div
+        class="star star-3"
+        data-tooltip="Microbes in Oxygen Minimum Zones"
+        onclick="openModal3()"
+      >
+        <div class="inner-star"></div>
+      </div>
+      <div
+        class="star star-4"
+        data-tooltip="Living Fossils of the Atacama Trench"
+        onclick="openModal4()"
+      >
+        <div class="inner-star"></div>
+      </div>
+      <div
+        class="star star-5"
+        data-tooltip="High Seas and Seamounts of the Nazca Ridge"
+        onclick="openModal5()"
+      >
+        <div class="inner-star"></div>
+      </div>
+      <div
+        class="star star-6"
+        data-tooltip="Fire and Ice: Volcanic and Glacial Interactions"
+        onclick="openModal6()"
+      >
+        <div class="inner-star"></div>
+      </div>
+      <div
+        class="star star-7"
+        data-tooltip="Canyons, Vents, and Seeps of the Chile Margin"
+        onclick="openModal7()"
+      >
+        <div class="inner-star"></div>
+      </div>
+
+      <div class="background-stars">
+        <div class="bg-star bg-star-1"></div>
+        <div class="bg-star bg-star-2"></div>
+        <div class="bg-star bg-star-3"></div>
+        <div class="bg-star bg-star-4"></div>
+        <div class="bg-star bg-star-5"></div>
+        <div class="bg-star bg-star-6"></div>
+      </div>
+
+      <!-- <div class="fog"></div> -->
+
+      <!-- Botón de descarga -->
+      <a
+        class="download-btn"
+        href="./HappyHolidays.jpg"
+        download
+        aria-label="Download our gift for you"
+      ></a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tingle.js@0.15.3/dist/tingle.min.js"></script>
+    <script src="./modals.js" download></script>
+  </body>
+</html>
