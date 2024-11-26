@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const vanish = setTimeout(() => {
     intro.classList.add('vanish');
-  },2000);
+  },4000);
   setTimeout(() => {
     intro.remove();
-  },4000);
+  },5000);
 
   intro.addEventListener('click', ()=>{
     clearTimeout(vanish);

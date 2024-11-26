@@ -3,6 +3,14 @@ const modal = new tingle.modal({
   closeMethods: ["overlay", "button", "escape"],
   closeLabel: "Cerrar",
   cssClass: ["modal"],
+  onClose: function () {
+    const iframes = document.querySelectorAll('.tingle-modal iframe');
+    iframes.forEach((iframe) => {
+      const src = iframe.src; 
+      iframe.src = ''; 
+      iframe.src = src;
+    });
+  },
 });
 
 function openModal1(content) {

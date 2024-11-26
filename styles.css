@@ -470,11 +470,11 @@ body {
   transform: translateY(0px);
   border-radius: 15px;
   overflow: hidden;
-  min-height: 200px;
+  min-height: 350px;
 }
 
 .video iframe {
-  height: 100%;
+  height: 60vh;
   aspect-ratio: 4 / 7;
 }
 
@@ -507,6 +507,7 @@ body {
     background-color: transparent;
     box-shadow: none;
     color: #fff;
+    overflow: visible;
   }
   .tingle-modal__closeLabel {
     display: none;
@@ -580,4 +581,24 @@ body {
 .intro.vanish {
   opacity: 0;
   pointer-events: none;
+}
+
+.logo{
+  height: 80px;
+  width: auto;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.logo img{
+  height: 100%;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .logo{
+    height: 40px;
+  }
+  
 }
