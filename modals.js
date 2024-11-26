@@ -96,7 +96,7 @@ function openModal6(content) {
           </a>
         </h2>
         <div class="video">
-          <iframe width="478" height="849" src="https://www.youtube.com/embed/p0bNJV2WSlo" title="Holiday Card - FKt240802 Fire &amp; Ice" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/p0bNJV2WSlo" title="Holiday Card - FKt240802 Fire &amp; Ice" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <p>The #EruptionArchive scientists collected multiple types of core samples and painstakingly sifted through sediment and mud to document and study the impact of the 2008 Chaitén Volcano’s eruption on the marine environment. Their research could unlock deeper-time records of major volcanic eruptions in the region, allowing scientists to reconstruct volcanic behavior in Southern Chile over geologic time.</p>
     `);
