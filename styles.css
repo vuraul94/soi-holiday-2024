@@ -223,8 +223,8 @@ body {
 
 .download-btn {
   background: url("btn.webp") no-repeat center center/contain;
-  width: 400px;
-  height: 100px;
+  aspect-ratio: 30 / 7;
+  width: 22vw;
   border: none;
   cursor: pointer;
   margin-bottom: 50px;
@@ -324,8 +324,8 @@ body {
   }
 
   .download-btn {
-    width: 250px;
-    height: 60px;
+    height: unset;
+    width: 70vw;
   }
 }
 
@@ -508,7 +508,8 @@ body {
     background-color: transparent;
     box-shadow: none;
     color: #fff;
-    overflow: visible;
+    height: auto;
+    width: auto;
   }
   .tingle-modal__closeLabel {
     display: none;
@@ -517,6 +518,8 @@ body {
 
 .tingle-modal__close {
   right: 10%;
+  height: auto;
+  width: auto;
 }
 
 .tingle-modal__closeIcon {
