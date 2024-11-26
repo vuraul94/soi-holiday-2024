@@ -223,8 +223,8 @@ body {
 
 .download-btn {
   background: url("btn.webp") no-repeat center center/contain;
-  width: 300px;
-  height: 70px;
+  width: 400px;
+  height: 100px;
   border: none;
   cursor: pointer;
   margin-bottom: 50px;
@@ -471,10 +471,11 @@ body {
   border-radius: 15px;
   overflow: hidden;
   min-height: 350px;
+  height: 60vh;
 }
 
 .video iframe {
-  height: 60vh;
+  height: 100%;
   aspect-ratio: 4 / 7;
 }
 
