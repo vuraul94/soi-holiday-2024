@@ -117,7 +117,7 @@ function openModal7(content) {
           </a>
         </h2>
         <div class="video">
-          <iframe src="https://www.youtube.com/embed/PPFOBrfia7E" title="Holiday Card - FKt241011 Onyx squid hatching" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/mEaW4aWr-bk?list=PLJGVqQI3okzY7kHQOr6yQk4L82M6QdgQ4" title="FKt241011 - Glitter Polychaete" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <p>Some deep-sea worms are bioluminescent, but this sassy sparkler has protein structures in the bristles that make them iridescent. Polychaetes play a vital role throughout our global Ocean, and seeing this unusual animal make headlines brought smiles to the Schmidt Ocean Institute team.</p>
         <p class="note">Click expedition title for more info</p>
