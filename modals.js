@@ -23,7 +23,7 @@ function openModal1(content) {
         <div class="video">
           <iframe src="https://www.youtube.com/embed/zsLKnqm8GYA" title="Holiday Card - FKt240108" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <p>This Chaunacops, or “walking” fish captured imaginations and garnered lots of attention. “The sea toad has modified fins that allow it to walk on the seafloor — partly a hunting strategy and partly because it’s more energy efficient than swimming”, Co-Chief Scientist Javier Sellanes explained. “As the first scientific report of a sea toad in the southeastern Pacific, the sea toad is likely a new species.”</p>
+        <p>This Chaunacops, or “walking” fish captured imaginations and garnered lots of attention. “The sea toad has modified fins that allow it to walk on the seafloor — partly a hunting strategy and partly because it’s more energy efficient than swimming,” Co-Chief Scientist Javier Sellanes explained. “As the first scientific report of a sea toad in the southeastern Pacific, the sea toad is likely a new species.”</p>
         <a class="note" href="https://schmidtocean.org/cruise/seamounts-of-the-southeast-pacific/" target="_blank" rel=”noopener noreferrer”>More info</a>
         `);
   modal.open();
@@ -71,7 +71,7 @@ function openModal4(content) {
         <div class="video">
           <iframe src="https://www.youtube.com/embed/v4yuy-1iu5A" title="Holiday Card - FKt240524 Munnopsid isopod" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <p>This deep-sea daddy long-legs, more accurately described as a Munnopsis isopod, was observed during the <a href="https://www.youtube.com/hashtag/atacamatrenchancients" target="_blank" rel=”noopener noreferrer”>#AtacamaTrenchAncients</a> expedition off the coast of Chile. An international team was working to characterize the microbial and macrofaunal communities in the surrounding areas of the Atacama Trench.</p>
+        <p>This deep-sea daddy longlegs, more accurately described as a Munnopsis isopod, was observed during the <a href="https://www.youtube.com/hashtag/atacamatrenchancients" target="_blank" rel=”noopener noreferrer”>#AtacamaTrenchAncients</a> expedition off the coast of Chile. An international team was working to characterize the microbial and macrofaunal communities in the surrounding areas of the Atacama Trench.</p>
         <a class="note" href="https://schmidtocean.org/cruise/living-fossils-of-the-atacama-trench/" target="_blank" rel=”noopener noreferrer”>More info</a>
         `);
   modal.open();
